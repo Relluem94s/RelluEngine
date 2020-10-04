@@ -1,0 +1,13 @@
+#version 140
+
+in vec2 textureCoords;
+
+out vec4 out_Colour;
+
+uniform sampler2D colourTexture;
+uniform vec3 color;
+
+void main(void){
+	out_Colour = texture(colourTexture, textureCoords);
+	out_Colour.rgb = mix(out_Colour.rgb, out_Colour.rgb / color, 0.9);
+}

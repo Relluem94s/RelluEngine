@@ -1,0 +1,37 @@
+F1:         Take Screenshot
+
+F2:     + 1 Random Light Color 1
+        + 2 Random Light Color 2
+        + 3 Random Light Color 3
+        + 4 Random Light Color 4
+        
+F3:     + 0 Toggle PolygonMode to WireFrame or Normal
+        + 1 shows Debug Info in Console when Debug in options is true
+        + 2 shows Current Terrain Info
+        + 4 Respawns Player on Spawnpoint
+        + 5 Toggle Particle Render
+        + 9 Regenerate World
+        
+F4:     + 1 Toggle PostProcessingFilter 0-8 for Slot 1
+        + 2 Toggle PostProcessingFilter 0-8 for Slot 2
+        + 3 Toggle PostProcessingFilter 0-8 for Slot 3
+        + 4 Toggle PostProcessingFilter 0-8 for Slot 4
+        + 5 Toggle PostProcessingFilter 0-8 for Slot 5
+        + 6 Toggle PostProcessingFilter 0-8 for Slot 6
+        
+F6:         Saves World
+F11:        Toggle Fullscreen
+
+ESC:        Toggle Menu
+T:          Toggle Chat // ENTER ESC SHIFT
+.:          Play OGG File from user.dir/RelluEngine/music
+,:          Stop Playing Current Title
+
+Move:       W/A/S/D
+Jump:       Space
+Sprint:     W + Shift
+
+
+Camera Pitch and Yaw:   UP/DOWN/LEFT/RIGHT
+Camera Pitch and Yaw:   Mouse Left / Mouse Right Dragging (Bugs)
+Camera Zoom:            Mouse Wheel
