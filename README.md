@@ -1,4 +1,3 @@
-# RelluEngine
-Java LWJGL Engine
+![RelluEngine](https://github.com/Relluem94/RelluEngine/blob/main/relluengine.png?raw=true)
 
-![Logo](https://github.com/Relluem94/RelluEngine/blob/main/relluengine.png?raw=true)
+Java LWJGL Engine
