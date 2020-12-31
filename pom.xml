@@ -5,7 +5,7 @@
     <artifactId>RelluEngine</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
-        
+    <url>https://github.com/Relluem94/RelluEngine</url>
     <dependencyManagement>
         <dependencies>
             <dependency>
