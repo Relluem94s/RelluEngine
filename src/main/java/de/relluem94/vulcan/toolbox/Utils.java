@@ -309,7 +309,7 @@ public class Utils {
                 }
             } else {
                 if (args[0].equalsIgnoreCase("title")) {
-                    String text = toString(args).replace("title ", "");
+                    final String text = toString(args).replace("title ", "");
 //					if(!Main.title_text.isVisible()){
 //						Main.title_text.setVisible(true);
 //					}

@@ -25,8 +25,8 @@ public class ScreenShot {
     private static Runnable r1;
 
     public void takeScreenshot() {
-        int width = Display.getWidth();
-        int height = Display.getHeight();
+        final int width = Display.getWidth();
+        final int height = Display.getHeight();
 
         GL11.glReadBuffer(GL11.GL_FRONT);
         buffer = BufferUtils.createByteBuffer(width * height * 3);

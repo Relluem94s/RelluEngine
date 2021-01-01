@@ -1,12 +1,11 @@
 package de.relluem94.vulcan.renderEngine.shadows;
 
 import org.lwjgl.opengl.Display;
+import de.relluem94.vulcan.main.Main;
+import de.relluem94.vulcan.renderEngine.MasterRenderer;
 import org.lwjgl.util.vector.Matrix4f;
 import org.lwjgl.util.vector.Vector3f;
 import org.lwjgl.util.vector.Vector4f;
-
-import de.relluem94.vulcan.main.Main;
-import de.relluem94.vulcan.renderEngine.MasterRenderer;
 
 /**
  * Represents the 3D cuboidal area of the world in which objects will cast

@@ -1,0 +1,15 @@
+#version 140
+
+in vec2 textureCoords;
+
+out vec4 out_Colour;
+
+uniform sampler2D colourTexture;
+uniform float offset;
+
+
+void main(void) {
+  vec2 texcoord = textureCoords;
+  texcoord.x += sin(texcoord.y * 4*2*3.14159 + offset) / 100;
+  out_Colour = texture2D(colourTexture, texcoord);
+}

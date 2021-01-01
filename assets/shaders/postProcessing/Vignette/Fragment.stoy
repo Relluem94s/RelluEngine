@@ -1,0 +1,20 @@
+#version 140
+
+in vec2 textureCoords;
+
+out vec4 out_Colour;
+
+uniform sampler2D colourTexture;
+uniform vec2 resolution;
+
+uniform float RADIUS;
+uniform float SOFTNESS;
+uniform vec3 vignetteColor;
+
+void main(void){
+	vec2 position = (gl_FragCoord.xy / resolution.xy) - vec2(0.5);
+	float len = length(position);
+	float vignette = smoothstep(RADIUS, RADIUS-SOFTNESS, len);
+	out_Colour = texture(colourTexture, textureCoords);
+	out_Colour.rgb = mix(vignetteColor, out_Colour.rgb, vignette);
+}

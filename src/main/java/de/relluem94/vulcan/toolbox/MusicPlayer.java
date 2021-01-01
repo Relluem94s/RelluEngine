@@ -43,7 +43,7 @@ public class MusicPlayer {
             if (executorService == null) {
                 executorService = Executors.newFixedThreadPool(1);
             }
-            String name = files[index].getName();
+            final String name = files[index].getName();
             if (name.toLowerCase().endsWith("ogg")) {
                 Runnable r1 = new Runnable() {
                     @Override
