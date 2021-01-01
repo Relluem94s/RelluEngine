@@ -1,6 +1,5 @@
 package de.relluem94.vulcan.entities.components;
 
-
-public class EnchantmentComponent{
+public class EnchantmentComponent {
 
 }

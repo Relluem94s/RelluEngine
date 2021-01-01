@@ -1,6 +1,7 @@
 package de.relluem94.vulcan.toolbox.maths;
 
 public class Tuple3d {
+
     public double x, y, z;
 
     public Tuple3d() {
@@ -38,9 +39,9 @@ public class Tuple3d {
     }
 
     public double dot(Tuple3d u) {
-        return u.x * this.x +
-                u.y * this.y +
-                u.z * this.z;
+        return u.x * this.x
+                + u.y * this.y
+                + u.z * this.z;
     }
 
     public void add(Tuple3d u, Tuple3d v) {
@@ -107,9 +108,9 @@ public class Tuple3d {
     }
 
     public double distance(Tuple3d u) {
-        return Math.sqrt((this.x - u.x) * (this.x - u.x) +
-                (this.y - u.y) * (this.y - u.y) +
-                (this.z - u.z) * (this.z - u.z));
+        return Math.sqrt((this.x - u.x) * (this.x - u.x)
+                + (this.y - u.y) * (this.y - u.y)
+                + (this.z - u.z) * (this.z - u.z));
     }
 
     public void vectorMatrixMul(Tuple3d vector, Matrix4f m) {

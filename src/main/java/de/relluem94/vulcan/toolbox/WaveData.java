@@ -4,26 +4,26 @@ import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
- 
+
 import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.UnsupportedAudioFileException;
- 
+
 import org.lwjgl.BufferUtils;
 import org.lwjgl.openal.AL10;
- 
+
 public class WaveData {
- 
+
     final int format;
     final int samplerate;
     final int totalBytes;
     final int bytesPerFrame;
     final ByteBuffer data;
- 
+
     private final AudioInputStream audioStream;
     private final byte[] dataArray;
- 
+
     private WaveData(AudioInputStream stream) {
         this.audioStream = stream;
         AudioFormat audioFormat = stream.getFormat();
@@ -35,7 +35,7 @@ public class WaveData {
         this.dataArray = new byte[totalBytes];
         loadData();
     }
- 
+
     protected void dispose() {
         try {
             audioStream.close();
@@ -44,7 +44,7 @@ public class WaveData {
             e.printStackTrace();
         }
     }
-     
+
     private ByteBuffer loadData() {
         try {
             int bytesRead = audioStream.read(dataArray, 0, totalBytes);
@@ -57,12 +57,11 @@ public class WaveData {
         }
         return data;
     }
- 
- 
-    public static WaveData create(String file){
-        InputStream stream = Class.class.getResourceAsStream("/"+file);
-        if(stream==null){
-            System.err.println("Couldn't find file: "+file);
+
+    public static WaveData create(String file) {
+        InputStream stream = Class.class.getResourceAsStream("/" + file);
+        if (stream == null) {
+            System.err.println("Couldn't find file: " + file);
             return null;
         }
         InputStream bufferedInput = new BufferedInputStream(stream);
@@ -77,8 +76,7 @@ public class WaveData {
         WaveData wavStream = new WaveData(audioStream);
         return wavStream;
     }
- 
- 
+
     private static int getOpenAlFormat(int channels, int bitsPerSample) {
         if (channels == 1) {
             return bitsPerSample == 8 ? AL10.AL_FORMAT_MONO8 : AL10.AL_FORMAT_MONO16;
@@ -86,5 +84,5 @@ public class WaveData {
             return bitsPerSample == 8 ? AL10.AL_FORMAT_STEREO8 : AL10.AL_FORMAT_STEREO16;
         }
     }
- 
+
 }

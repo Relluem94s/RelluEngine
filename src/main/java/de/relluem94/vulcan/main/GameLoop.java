@@ -23,39 +23,38 @@ import de.relluem94.vulcan.toolbox.Utils;
 
 public class GameLoop {
 
-	public static void main(String[] args) {
-		try{
-			// ************* First Steps *************//	
-			init();
-			defineText();
-			// ************* Models and Textures *************//
-			loadModelsAndTextures();
-			createTerrain();
-			// ************* GUIS *************//
-			initGUI();
-			// ************* Entities *************//
-			createEntities();
-			initPhysics();
-			showDebugInfo();		
-			// ************* OtherStuff *************//
-			initMousePicker();
-			// ************* Main Loop *************//
-			while (!closeRequest) {	
-				update();
-				render3D();
-				render2D();
-				prepare();
-				doPhysics();
-			}
-			// ************* Clean Up *************//
-			cleanUp();
-		}
-		catch(Exception e){
-			Utils.log("A Problem happend", 1);
-			AL.destroy();
-			e.printStackTrace();
-			System.exit(1);
-		}
-		
-	}
+    public static void main(String[] args) {
+        try {
+            // ************* First Steps *************//	
+            init();
+            defineText();
+            // ************* Models and Textures *************//
+            loadModelsAndTextures();
+            createTerrain();
+            // ************* GUIS *************//
+            initGUI();
+            // ************* Entities *************//
+            createEntities();
+            initPhysics();
+            showDebugInfo();
+            // ************* OtherStuff *************//
+            initMousePicker();
+            // ************* Main Loop *************//
+            while (!closeRequest) {
+                update();
+                render3D();
+                render2D();
+                prepare();
+                doPhysics();
+            }
+            // ************* Clean Up *************//
+            cleanUp();
+        } catch (Exception e) {
+            Utils.log("A Problem happend", 1);
+            AL.destroy();
+            e.printStackTrace();
+            System.exit(1);
+        }
+
+    }
 }

@@ -2,14 +2,14 @@ package de.relluem94.vulcan.toolbox.generators;
 
 import java.util.ArrayList;
 
-public class FixedSizeList<T> extends ArrayList<T>{
+public class FixedSizeList<T> extends ArrayList<T> {
 
     /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+     *
+     */
+    private static final long serialVersionUID = 1L;
 
-	public FixedSizeList(int capacity) {
+    public FixedSizeList(int capacity) {
         super(capacity);
         for (int i = 0; i < capacity; i++) {
             super.add(null);

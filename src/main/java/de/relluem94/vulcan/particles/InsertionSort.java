@@ -6,19 +6,18 @@ import java.util.List;
  * A simple implementation of an insertion sort. I implemented this very quickly
  * the other day so it may not be perfect or the most efficient! Feel free to
  * implement your own sorter instead.
- * 
+ *
  * @author Karl
  *
  */
 public class InsertionSort {
- 
+
     /**
      * Sorts a list of particles so that the particles with the highest distance
      * from the camera are first, and the particles with the shortest distance
      * are last.
-     * 
-     * @param list
-     *            - the list of particles needing sorting.
+     *
+     * @param list - the list of particles needing sorting.
      */
     public static void sortHighToLow(List<Particle> list) {
         for (int i = 1; i < list.size(); i++) {
@@ -28,7 +27,7 @@ public class InsertionSort {
             }
         }
     }
- 
+
     private static void sortUpHighToLow(List<Particle> list, int i) {
         Particle item = list.get(i);
         int attemptPos = i - 1;
@@ -38,5 +37,5 @@ public class InsertionSort {
         list.remove(i);
         list.add(attemptPos, item);
     }
- 
+
 }

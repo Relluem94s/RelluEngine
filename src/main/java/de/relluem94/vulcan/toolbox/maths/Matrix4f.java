@@ -1,14 +1,16 @@
 package de.relluem94.vulcan.toolbox.maths;
 
 public class Matrix4f {
+
     float elements[] = new float[16];
 
     public Matrix4f() {
     }
 
     public Matrix4f(float elements[]) {
-        for (int i = 0; i < 16; i++)
+        for (int i = 0; i < 16; i++) {
             this.elements[i] = elements[i];
+        }
     }
 
     public Matrix4f(Tuple3f t1, Tuple3f t2, Tuple3f t3, boolean row_column) {
@@ -60,27 +62,31 @@ public class Matrix4f {
 
     void add(Matrix4f m) {
 
-        for (int i = 0; i < 16; i++)
+        for (int i = 0; i < 16; i++) {
             elements[i] += m.elements[i];
+        }
     }
 
     void sub(Matrix4f m) {
 
-        for (int i = 0; i < 16; i++)
+        for (int i = 0; i < 16; i++) {
             elements[i] -= m.elements[i];
+        }
     }
 
     void mul(float s) {
 
-        for (int i = 0; i < 16; i++)
+        for (int i = 0; i < 16; i++) {
             elements[i] *= s;
+        }
     }
 
     void mul(Matrix4f m) {
 
         float copy[] = new float[16];
-        for (int i = 0; i < 16; i++)
+        for (int i = 0; i < 16; i++) {
             copy[i] = elements[i];
+        }
 
         for (int i = 0; i < 16; i += 4) {
             elements[i + 0] = copy[i] * m.elements[0] + copy[i + 1] * m.elements[4] + copy[i + 2] * m.elements[8] + copy[i + 3] * m.elements[12];
@@ -106,14 +112,16 @@ public class Matrix4f {
 
     void add(Matrix4f m, Matrix4f n) {
 
-        for (int i = 0; i < 16; i++)
+        for (int i = 0; i < 16; i++) {
             elements[i] = m.elements[i] + n.elements[i];
+        }
     }
 
     void sub(Matrix4f m, Matrix4f n) {
 
-        for (int i = 0; i < 16; i++)
+        for (int i = 0; i < 16; i++) {
             elements[i] = m.elements[i] - n.elements[i];
+        }
     }
 
     void mul(Matrix4f m, Matrix4f n) {
@@ -150,8 +158,9 @@ public class Matrix4f {
     void transpose() {
 
         float copy[] = new float[16];
-        for (int i = 0; i < 16; i++)
+        for (int i = 0; i < 16; i++) {
             copy[i] = elements[i];
+        }
 
         elements[0] = copy[0];
         elements[1] = copy[4];
