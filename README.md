@@ -1,3 +1,3 @@
-![RelluEngine](https://img.relluem94.de/logos/relluengine.png)
+![RelluEngine](https://img.relluem94.de/logos/app/relluengine.png)
 
 Java LWJGL Engine
